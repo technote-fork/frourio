@@ -60,7 +60,7 @@ type ServerResponse<K extends AspidaMethodParams> =
       BaseResponse<K['resBody'], K['resHeaders'], K['status']>,
       'body' | 'headers'
     >)
-  | PartiallyPartial<BaseResponse<any, any, HttpStatusNoOk>, 'body' | 'headers'>
+  | PartiallyPartial<BaseResponse<never, never, HttpStatusNoOk>, 'body' | 'headers'>
 
 // prettier-ignore
 type BlobToFile<T extends AspidaMethodParams> = T['reqFormat'] extends FormData

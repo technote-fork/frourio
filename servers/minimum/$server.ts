@@ -36,7 +36,7 @@ type ServerResponse<K extends AspidaMethodParams> =
       BaseResponse<K['resBody'], K['resHeaders'], K['status']>,
       'body' | 'headers'
     >)
-  | PartiallyPartial<BaseResponse<any, any, HttpStatusNoOk>, 'body' | 'headers'>
+  | PartiallyPartial<BaseResponse<never, never, HttpStatusNoOk>, 'body' | 'headers'>
 
 // prettier-ignore
 type RequestParams<T extends AspidaMethodParams> = Pick<{
